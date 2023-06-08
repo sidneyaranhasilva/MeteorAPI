@@ -1,0 +1,30 @@
+
+CREATE TABLE dispositivo(
+codigo_disp int(4) AUTO_INCREMENT,
+nome_disp varchar(30) NOT NULL,
+
+PRIMARY KEY (codigo_disp)
+);
+
+CREATE TABLE dados_dispositivo(
+codigo_dados int(4) AUTO_INCREMENT,
+humidade_dado FLOAT NOT NULL,
+tempertatura_dado FLOAT NOT NULL,
+datahora_dado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+codigo_disp int(4),
+PRIMARY KEY (codigo_dados),
+
+ FOREIGN KEY (codigo_disp)
+        REFERENCES dispositivo(codigo_disp)
+        ON DELETE CASCADE
+);
+
+
+  insert into banco_meteroroli.dispositivo (nome_disp) values('Floresta - Centro Visitante');
+    insert into banco_meteroroli.dispositivo (nome_disp) values('Floresta - Praça');
+
+INSERT INTO dados_dispositivo(codigo_dados , humidade_dado , tempertatura_dado, codigo_disp ) VALUES (null, 57.00,  27.60, 1) ;
+
+select * from banco_meteroroli.dados_dispositivo;
+
+INSERT INTO banco_meteroroli.dados_dispositivo(codigo_dados , humidade_dado , tempertatura_dado, codigo_disp ) VALUES (null, 57.02,  27.60, 1) ;
