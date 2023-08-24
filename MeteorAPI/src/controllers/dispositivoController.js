@@ -23,7 +23,7 @@ module.exports = {
 
         let codigo = req.params.codigo;
 
-        let dados = await meterioServices.findById(codigo);
+        let dados = await dispositivoService.findById(codigo);
 
         if(dados){
             json.result = dados;
