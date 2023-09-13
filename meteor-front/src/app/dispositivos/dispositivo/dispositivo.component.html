@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12">
+        <a 
+            href="#" 
+            class="list-group-item clearfix" 
+            *ngFor="let dispositivo of dispositivos">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ dispositivo.codigo_disp }} - {{ dispositivo.nome_disp }}</h4>
+                <app-dados  [recebeFiltro]="dispositivo.codigo_disp"></app-dados>
+            </div>
+            <span class="pull-right">
+                <img 
+                    src= "../../../assets/img/{{ dispositivo.codigo_disp }}.png"
+                  
+                    class="img-responsive" 
+                    style="max-height: 50px;">
+            </span>
+        </a>
+       
+    </div>
+</div>
+

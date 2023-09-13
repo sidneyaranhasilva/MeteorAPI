@@ -1,0 +1,40 @@
+ /* Barra de navegação */
+ header, .navbar {
+    background-color: rgb(0, 128, 64);
+  }
+  
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .navbar{
+    height: 80px;
+  }
+
+  #logo {
+    width: 75px;
+    height: 50px;
+    
+}
+  
+  .navbar-brand {
+    padding: 0;
+    color: #FFF;
+  }
+  
+  .navbar-brand:hover {
+    color: #6e6e6e;
+  }
+  
+  #navbar-links a {
+    color: #FFF;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+
+  .container {
+    width: 98%;
+}
