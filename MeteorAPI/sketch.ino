@@ -1,5 +1,9 @@
+#include <DHT.h>
+#include <DHT_U.h>
+
 #include <ESP8266WiFi.h>
 #include "DHT.h"
+
 #include <ESP8266HTTPClient.h>
 
 
@@ -102,9 +106,6 @@ if(body != bodyAux ){
     bodyAux = body;
 
 
-  delay(1000);    
+  delay(20000);    
     
 }
-
-
-
