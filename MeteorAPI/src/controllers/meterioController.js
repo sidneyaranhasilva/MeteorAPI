@@ -50,7 +50,8 @@ module.exports = {
                 humidade: dados[i].humidade_dado,
                 temperatura: dados[i].tempertatura_dado,
                 dispositivo: dados[i].codigo_disp,
-                dataHora: dados[i].datahora_dado,
+                dataHora: new Date(dados[i].datahora_dado).setHours(+9),
+                /*Acerto do Fábio e Gustavo na data +9*/
             });
         }
 
